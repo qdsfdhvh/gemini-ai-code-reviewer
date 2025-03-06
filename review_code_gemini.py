@@ -138,7 +138,9 @@ def create_prompt(file: PatchedFile, hunk: Hunk, pr_details: PRDetails) -> str:
     - Provide comments and suggestions ONLY if there is something to improve, otherwise "reviews" should be an empty array.
     - Use GitHub Markdown in comments
     - Focus on bugs, security issues, and performance problems
+    - Do not provide repeated feedback on the same code; only offer the suggestions you believe to be the best.
     - IMPORTANT: NEVER suggest adding comments to the code
+    - IMPORTANT: Limit suggestions to a maximum of 20, prioritizing the most critical issues.
 
 Review the following code diff in the file "{file.path}" and take the pull request title and description into account when writing the response.
 
